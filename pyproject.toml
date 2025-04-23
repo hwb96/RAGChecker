@@ -1,29 +1,27 @@
-[tool.poetry]
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
 name = "ragchecker"
 version = "0.1.9"
 description = "RAGChecker: A Fine-grained Framework For Diagnosing Retrieval-Augmented Generation (RAG) systems."
 authors = [
-    "Xiangkun Hu <xiangkhu@amazon.com>",
-    "Lin Qiu <quln@amazon.com>",
-    "Tianhang Zhang <zzthang@amazon.com>",
-    "Dongyu Ru <rudongyu@amazon.com>",
-    "Peng Shi <penshi@amazon.com>",
-    "Shuaichen Chang <cshuaich@amazon.com>",
+    { name = "Xiangkun Hu", email = "xiangkhu@amazon.com" },
+    { name = "Lin Qiu", email = "quln@amazon.com" },
+    { name = "Tianhang Zhang", email = "zzthang@amazon.com" },
+    { name = "Dongyu Ru", email = "rudongyu@amazon.com" },
+    { name = "Peng Shi", email = "penshi@amazon.com" },
+    { name = "Shuaichen Chang", email = "cshuaich@amazon.com" },
 ]
+requires-python = "~=3.11"
 readme = "README.md"
 license = "Apache-2.0"
+dependencies = [
+    "refchecker>=0.2,<0.3",
+    "loguru>=0.7,<0.8",
+    "dataclasses-json>=0.6,<0.7",
+]
 
-[tool.poetry.dependencies]
-python = "^3.9"
-refchecker = "^0.2"
-loguru = "^0.7"
-dataclasses-json = "^0.6"
-
-
-[tool.poetry.scripts]
+[project.scripts]
 ragchecker-cli = "ragchecker.cli:main"
-
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"

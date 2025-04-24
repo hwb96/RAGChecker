@@ -21,6 +21,8 @@ dependencies = [
     "refchecker>=0.2,<0.3",
     "loguru>=0.7,<0.8",
     "dataclasses-json>=0.6,<0.7",
+    "sseclient>=0.0.27",
+    "colorama>=0.4.6",
 ]
 
 [project.scripts]

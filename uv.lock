@@ -1521,16 +1521,20 @@ name = "ragchecker"
 version = "0.1.9"
 source = { editable = "." }
 dependencies = [
+    { name = "colorama" },
     { name = "dataclasses-json" },
     { name = "loguru" },
     { name = "refchecker" },
+    { name = "sseclient" },
 ]
 
 [package.metadata]
 requires-dist = [
+    { name = "colorama", specifier = ">=0.4.6" },
     { name = "dataclasses-json", specifier = ">=0.6,<0.7" },
     { name = "loguru", specifier = ">=0.7,<0.8" },
     { name = "refchecker", specifier = ">=0.2,<0.3" },
+    { name = "sseclient", specifier = ">=0.0.27" },
 ]
 
 [[package]]
@@ -1999,6 +2003,16 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/0d/9b/be48e185c5a010e71b5135e4cdf317ff56b8ac4bc08f394bbf882ac13b05/srsly-2.5.1-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:bab90b85a63a1fe0bbc74d373c8bb9bb0499ddfa89075e0ebe8d670f12d04691", size = 1100354 },
     { url = "https://files.pythonhosted.org/packages/3a/e2/745aeba88a8513017fbac2fd2f9f07b8a36065e51695f818541eb795ec0c/srsly-2.5.1-cp313-cp313-win_amd64.whl", hash = "sha256:e73712be1634b5e1de6f81c273a7d47fe091ad3c79dc779c03d3416a5c117cee", size = 630634 },
 ]
+
+[[package]]
+name = "sseclient"
+version = "0.0.27"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "requests" },
+    { name = "six" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/cf/6c/fa601216344952be8f9a51a3f49b4274bbbc58bd395f87f67f6131726358/sseclient-0.0.27.tar.gz", hash = "sha256:b2fe534dcb33b1d3faad13d60c5a7c718e28f85987f2a034ecf5ec279918c11c", size = 7465 }
 
 [[package]]
 name = "sympy"
